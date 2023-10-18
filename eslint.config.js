@@ -1,11 +1,7 @@
-const { FlatCompat } = require("@eslint/eslintrc");
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+const config = require("./config");
 
 module.exports = [
-  ...compat.extends("plugin:eslint-plugin-prettier/recommended"),
+  config,
   {
     languageOptions: {
       parserOptions: {
